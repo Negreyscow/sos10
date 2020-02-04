@@ -48,9 +48,6 @@ function Main({ navigation }){
             }
         })
 
-        response.data.devs.map(e => {
-            console.log(e.github_username)
-        })
         setDevs(response.data.devs)
     }
 
@@ -66,9 +63,9 @@ function Main({ navigation }){
                 initialRegion={currentRegion} 
                 style={styles.map}
             >
-                {devs.map(dev => {
+                {devs.map(dev => (
 
-                    if (!dev) return
+                    console.log(dev.github_username),
 
                     <Marker
                         key={dev._id}
@@ -93,7 +90,7 @@ function Main({ navigation }){
                         </Callout>
 
                     </Marker>
-                })}
+                ))}
             </MapView>
             <View style={styles.searchForm}> 
                 <TextInput 
