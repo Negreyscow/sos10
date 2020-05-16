@@ -52,7 +52,8 @@ function Main({ navigation }){
 
     async function loadDevs() {
         const { latitude, longitude } = currentRegion
-
+        
+        console.log('DEVSSS')
         const response = await api.get('/search', {
             params: {
                 latitude,
@@ -60,13 +61,13 @@ function Main({ navigation }){
                 techs
             }
         })
-
+        console.log('DEVSSS')
         setDevs(response.data.devs)
         setupWebSocket() 
     }
 
     function handleRegionChanged(region) {
-        console.log(region)
+        console.log("regions", region)
         setCurrentRegion(region)
     }
 
