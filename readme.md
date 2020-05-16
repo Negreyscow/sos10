@@ -4,7 +4,7 @@
 
 <h1 align="center">
   <p align="center">
-    <img height="320" src='./img/desktop.png'>
+    <img height="320" src='./img/desktop.PNG'>
     <img height="320" src="./img/mobile.png">
   </p>
     
